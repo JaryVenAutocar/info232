@@ -19,8 +19,9 @@ def answer_01(data):
 
     """
     # TODO : standardize data
-    scaled_data = data
-    return scaled_data
+    df_scaled = (df-df.mean())/df.std()
+    df_scaled.iloc[:, -1] = df.iloc[:, -1]
+    return df_scaled
 
 
 def answer_02():
@@ -64,7 +65,7 @@ def answer_04():
     YES = 'YES'
     NO = 'NO'
     # Return YES or NO
-    return None
+    return NO
 
 
 def answer_05():
@@ -80,7 +81,7 @@ def answer_05():
     CASE3 = "CS"
     CASE4 = "CROP"
     # Return CASE1, CASE2, CASE3 or CASE4
-    return None
+    return CS
 
 
 
@@ -92,7 +93,7 @@ def answer_06():
     under_fitting = "under-fitting"
     over_fitting  = "over-fitting"
     # Return under_fitting or over_fitting
-    return None
+    return over_fitting
 
 
 def answer_07():
@@ -102,7 +103,7 @@ def answer_07():
     under_fitting = "under-fitting"
     over_fitting  = "over-fitting"
     # Return under_fitting or over_fitting
-    return None
+    return under_fitting
 
 
 def answer_08():
@@ -113,7 +114,7 @@ def answer_08():
          "Decision Tree", "Random Forest", "Neural Net", "AdaBoost",
          "Naive Bayes", "QDA"]
 
-    overfitting_models = ["Replace", "with", "model", "names", "from", "the",  "list", "above"]
+    overfitting_models = ["RBF SVM", "Decision Tree"]
     return overfitting_models
 
 
@@ -125,7 +126,7 @@ def answer_09():
          "Decision Tree", "Random Forest", "Neural Net", "AdaBoost",
          "Naive Bayes", "QDA"]
 
-    underfitting_models = ["Replace", "with", "model", "names", "from", "the", "list", "above"]
+    underfitting_models = ["Linear SV", "Naive Bayes", "QDA"]
     return underfitting_models
 
 
